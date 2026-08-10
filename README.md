@@ -19,4 +19,4 @@ I engineer high-availability hybrid-cloud environments and build decentralized i
 #### 📫 Connect with Me
 * **Email:** Yampi@merayampi.com
 * **Website:** [merayampi.com](https://merayampi.com) 
-* **LinkedIn:** [linkedin.com/in/your-custom-url]
+* **LinkedIn:** (https://linkedin.com/in/merayampi)
