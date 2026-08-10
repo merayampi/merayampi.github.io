@@ -17,6 +17,6 @@ I engineer high-availability hybrid-cloud environments and build decentralized i
 * Integrating local AI orchestration for workflow automation and infrastructure management.
 
 #### 📫 Connect with Me
-* **Email:** Yampi@merayampi.com
-* **Website:** [merayampi.com](https://merayampi.com) 
-* **LinkedIn:** (https://linkedin.com/in/merayampi)
+* **Email:** merayampi@gmail.com
+* **Website:** [merayampi.github.io] 
+* **LinkedIn:** [https://linkedin.com/in/merayampi]
