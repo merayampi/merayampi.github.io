@@ -56,6 +56,30 @@
       margin: 0 auto;
     }
 
+    /* Top Navigation Bar */
+    .nav-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .nav-bar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      transition: all 0.2s;
+    }
+
+    .nav-bar a.active, .nav-bar a:hover {
+      color: var(--text-bright);
+      border-color: var(--accent);
+      background: var(--pill-bg);
+    }
+
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -159,7 +183,7 @@
 
     .links-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 12px;
       margin-top: 14px;
     }
@@ -185,11 +209,24 @@
       background: var(--accent);
       color: #0d1117;
     }
+
+    .btn-highlight {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
+    <!-- Top Navigation Bar -->
+    <div class="nav-bar">
+      <a href="index.html" class="active">Overview</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services & Menu</a>
+    </div>
+
     <div class="card">
       <header>
         <h1>Jean-Pierre Rivera <span>(meraYampi)</span></h1>
@@ -229,8 +266,13 @@
         <li>Integrating local AI orchestration for workflow automation and infrastructure management.</li>
       </ul>
 
-      <h2>📫 Connect & Repositories</h2>
+      <h2>📫 Explore & Connect</h2>
       <div class="links-grid">
+        <!-- Direct Internal Page Links -->
+        <a class="btn-link btn-highlight" href="projects.html">📂 View Projects</a>
+        <a class="btn-link btn-highlight" href="services.html">💳 Service Menu</a>
+
+        <!-- External Professional Links -->
         <a class="btn-link" href="https://github.com/meraYampi" target="_blank" rel="noopener">GitHub</a>
         <a class="btn-link" href="https://linkedin.com/in/merayampi" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn-link" href="mailto:merayampi@gmail.com">Email Me</a>
