@@ -31,7 +31,7 @@
 
     .nav-bar {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 24px;
       flex-wrap: wrap;
     }
@@ -39,7 +39,7 @@
     .nav-bar a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       padding: 6px 14px;
       border-radius: 6px;
       border: 1px solid var(--border);
@@ -72,7 +72,6 @@
     h1 span { color: var(--accent); }
     .subtitle { color: var(--text-muted); font-size: 1.05rem; margin-top: 4px; }
 
-    /* Dual Image Gallery Layout */
     .profile-gallery {
       display: grid;
       grid-template-columns: 1fr;
@@ -93,18 +92,18 @@
 
     .profile-img-wrap img {
       width: 100%;
-      height: 260px;
+      height: 250px;
       object-fit: cover;
       display: block;
       transition: transform 0.3s ease;
     }
 
     .profile-img-wrap img:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
     .caption {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
       padding: 8px 12px;
       text-align: center;
@@ -119,6 +118,35 @@
 
     p { margin-bottom: 14px; font-size: 0.96rem; }
     strong { color: var(--text-bright); }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .btn-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--pill-bg);
+      border: 1px solid var(--border);
+      color: var(--text-bright);
+      padding: 9px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.88rem;
+      transition: all 0.2s;
+    }
+
+    .btn-link:hover {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #0d1117;
+    }
   </style>
 </head>
 <body>
@@ -134,31 +162,36 @@
     <div class="card">
       <header>
         <h1>About <span>Jean-Pierre Rivera</span></h1>
-        <div class="subtitle">Infrastructure Engineer • Technical Operations • Systems Architect</div>
+        <div class="subtitle">Systems Administrator • Operations Lead • Infrastructure Specialist</div>
       </header>
 
-      <!-- 2 Profile Images -->
       <div class="profile-gallery">
         <div class="profile-img-wrap">
-          <img src="profile-primary.jpg" alt="Jean-Pierre Rivera Primary Portrait">
+          <img src="IMG_3932.jpeg" alt="Jean-Pierre Rivera">
           <div class="caption">Jean-Pierre Rivera (meraYampi)</div>
         </div>
         <div class="profile-img-wrap">
-          <img src="profile-secondary.jpg" alt="Technical Operations and Lab Workspace">
-          <div class="caption">R&D & Infrastructure Workspace</div>
+          <img src="IMG_4579.jpeg" alt="Technical Operations and Infrastructure">
+          <div class="caption">theFenix Cluster Operations & Workspace</div>
         </div>
       </div>
 
-      <h2>Operational Philosophy</h2>
+      <h2>Operational Background</h2>
       <p>
-        I focus on building <strong>resilient, sovereign computing infrastructure</strong>. My systems design philosophy emphasizes bare-metal virtualization, strict Zero-Trust network boundary enforcement, and deterministic container lifecycle management.
+        I specialize in high-availability compute, data protection, and enterprise hardware environments. My work revolves around making complex server, virtualization, and networking stacks reliable, secure, and easy to maintain.
       </p>
 
-      <h2>Core Competencies</h2>
+      <h2>Engineering Philosophy</h2>
       <p>
-        Whether orchestrating multi-node virtualization environments using <strong>Proxmox VE</strong>, deploying automated container pipelines, or executing network segmentation audits, I specialize in eliminating single points of failure across technical operations.
+        By focusing on <strong>local-first infrastructure</strong> and zero-trust network boundaries, I build architectures designed to withstand hardware failure, eliminate data bottlenecks, and keep technical operations running smoothly without external dependencies.
       </p>
 
+      <div class="links-grid">
+        <a class="btn-link" href="https://github.com/meraYampi" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn-link" href="https://linkedin.com/in/merayampi" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn-link" href="https://youtube.com/@meraYampi" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn-link" href="mailto:merayampi@gmail.com">Contact Directly</a>
+      </div>
     </div>
   </div>
 
