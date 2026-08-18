@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Service Menu & Pricing | meraYampi</title>
-  <meta name="description" content="Technical operations, data recovery, infrastructure, and consulting service menu.">
+  <title>Services & Pricing | meraYampi</title>
+  <meta name="description" content="Clear tech support, file recovery, home server setup, and precision haircutting services.">
   <style>
     :root {
       --bg: #0d1117;
@@ -16,7 +16,7 @@
       --text-bright: #f0f6fc;
       --text-muted: #8b949e;
       --pill-bg: #21262d;
-      --special-pill: #388bfd33;
+      --special-pill: #388bfd26;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,14 +32,15 @@
 
     .nav-bar {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 24px;
+      flex-wrap: wrap;
     }
 
     .nav-bar a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       padding: 6px 14px;
       border-radius: 6px;
       border: 1px solid var(--border);
@@ -71,12 +72,40 @@
     h1 span { color: var(--accent); }
     .subtitle { color: var(--text-muted); font-size: 1.05rem; margin-top: 4px; }
 
-    /* Menu Layout */
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin: 32px 0 6px 0;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .category-title {
+      color: var(--text-bright);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .category-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .category-link:hover { text-decoration: underline; }
+
+    .category-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
     .menu-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      margin-top: 10px;
+      gap: 10px;
     }
 
     .menu-item {
@@ -99,7 +128,6 @@
     .menu-left {
       display: flex;
       align-items: center;
-      gap: 10px;
       position: relative;
     }
 
@@ -107,7 +135,7 @@
       color: var(--text-bright);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       border-bottom: 1px dashed var(--text-muted);
       position: relative;
     }
@@ -117,11 +145,10 @@
       border-bottom-color: var(--accent);
     }
 
-    /* CSS Tooltip on Hover */
     .service-link[data-tooltip]:hover::after {
       content: attr(data-tooltip);
       position: absolute;
-      bottom: 130%;
+      bottom: 125%;
       left: 0;
       background-color: #010409;
       color: var(--text-bright);
@@ -153,7 +180,8 @@
 
   <div class="container">
     <div class="nav-bar">
-      <a href="index.html">← Back to Overview</a>
+      <a href="index.html">Overview</a>
+      <a href="profile.html">Profile</a>
       <a href="projects.html">Projects</a>
       <a href="services.html" class="active">Services & Menu</a>
     </div>
@@ -161,88 +189,100 @@
     <div class="card">
       <header>
         <h1>Service <span>Menu & Pricing</span></h1>
-        <div class="subtitle">Hover over any service for details or click to view project case studies.</div>
+        <div class="subtitle">Hover over any item for details, or click a section to view the tiered service guide.</div>
       </header>
 
+      <!-- Category 1 -->
+      <div class="category-header">
+        <div class="category-title">💾 Data & Device Support</div>
+        <a href="services-data.html" class="category-link">View Full Tier Guide →</a>
+      </div>
+      <div class="category-desc">File retrieval, computer diagnostics, data sanitization, and automated local backups.</div>
       <div class="menu-list">
-        <!-- 1 -->
         <div class="menu-item">
           <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Small data recovery: Logical recovery for deleted files, raw USB/SD cards (TestDisk/PhotoRec).">Remote Logical Data Recovery</a>
+            <a href="services-data.html" class="service-link" data-tooltip="Small data recovery: Logical recovery for deleted files, corrupted USBs, and SD cards.">Lost File & USB Data Recovery</a>
           </div>
           <div class="price">$50</div>
         </div>
 
-        <!-- 2 -->
         <div class="menu-item">
           <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Docker Compose configuration, port mapping, and isolated bridge network setup.">Docker Microservice Stack Deployment</a>
-          </div>
-          <div class="price">$75</div>
-        </div>
-
-        <!-- 3 -->
-        <div class="menu-item">
-          <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Full Nginx Proxy Manager setup, local DNS routing, and automated SSL/TLS renewals.">Reverse Proxy & SSL Automation</a>
-          </div>
-          <div class="price">$90</div>
-        </div>
-
-        <!-- 4 -->
-        <div class="menu-item">
-          <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="VLAN isolation, default-deny firewall setup, and mobile Termux penetration audit.">Zero-Trust Network Hardening & Audit</a>
-          </div>
-          <div class="price">$120</div>
-        </div>
-
-        <!-- 5 -->
-        <div class="menu-item">
-          <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Proxmox VE installation, node clustering, and storage pool provisioning.">Proxmox Hypervisor Node Configuration</a>
-          </div>
-          <div class="price">$130</div>
-        </div>
-
-        <!-- 6 -->
-        <div class="menu-item">
-          <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Automated cron jobs for immutable storage backups, deduplication, and cold archive tars.">Automated Linux Backup & CLI Pipeline</a>
-          </div>
-          <div class="price">$85</div>
-        </div>
-
-        <!-- 7 -->
-        <div class="menu-item">
-          <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Isolated, air-gapped local LLM container runtime for private queries.">Local AI / LLM Workspace Integration</a>
-          </div>
-          <div class="price">$140</div>
-        </div>
-
-        <!-- 8 -->
-        <div class="menu-item">
-          <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Python (Pandas) script execution for deduplication, formatting, and outlier cleaning.">Dataset Sanitization & Pandas Pipeline</a>
+            <a href="services-data.html" class="service-link" data-tooltip="Clean up messy Excel sheets, remove duplicate rows, and fix broken table formatting.">Spreadsheet & Data Cleanup</a>
           </div>
           <div class="price">$65</div>
         </div>
 
-        <!-- 9 -->
         <div class="menu-item">
           <div class="menu-left">
-            <a href="projects.html" class="service-link" data-tooltip="Remote POS terminal sync, network gateway reconnects, and hardware triage.">Endpoint & POS Hardware Diagnostics</a>
+            <a href="services-data.html" class="service-link" data-tooltip="Troubleshooting POS terminals, receipt printers, card readers, and slow workstations.">Register & Computer Troubleshooting</a>
           </div>
           <div class="price">$60</div>
         </div>
 
-        <!-- 10 (Haircut Service) -->
+        <div class="menu-item">
+          <div class="menu-left">
+            <a href="services-data.html" class="service-link" data-tooltip="Automated nightly backups of your essential files to a secure local drive.">Automated Hard Drive Backups</a>
+          </div>
+          <div class="price">$85</div>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="category-header">
+        <div class="category-title">🌐 Servers & Networks</div>
+        <a href="services-network.html" class="category-link">View Full Tier Guide →</a>
+      </div>
+      <div class="category-desc">Self-hosted infrastructure, secure domain routing, home labs, and isolated private AI setups.</div>
+      <div class="menu-list">
+        <div class="menu-item">
+          <div class="menu-left">
+            <a href="services-network.html" class="service-link" data-tooltip="Deploy your self-hosted apps in isolated Docker containers with zero clutter.">Self-Hosted App Installation</a>
+          </div>
+          <div class="price">$75</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-left">
+            <a href="services-network.html" class="service-link" data-tooltip="Configure custom domains, secure padlock (SSL), and reverse proxies.">Secure Web Address Setup (SSL)</a>
+          </div>
+          <div class="price">$90</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-left">
+            <a href="services-network.html" class="service-link" data-tooltip="Isolate smart home and IoT devices on a separate VLAN so they can't access private systems.">Wi-Fi & Network Security Check</a>
+          </div>
+          <div class="price">$120</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-left">
+            <a href="services-network.html" class="service-link" data-tooltip="Turn standard hardware into a high-performance multi-system Proxmox server.">Home Server & Proxmox Setup</a>
+          </div>
+          <div class="price">$130</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-left">
+            <a href="services-network.html" class="service-link" data-tooltip="Run private AI models completely on your own hardware without cloud data leaks.">Private On-Device AI Assistant</a>
+          </div>
+          <div class="price">$140</div>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="category-header">
+        <div class="category-title">✂️ Precision Grooming</div>
+        <a href="services-grooming.html" class="category-link">View Service Details →</a>
+      </div>
+      <div class="category-desc">Dedicated styling, beard grooming, and personalized consultation.</div>
+      <div class="menu-list">
         <div class="menu-item special-item">
           <div class="menu-left">
-            <a href="index.html" class="service-link" data-tooltip="Master Barber precision cut, beard detailing, and complete consultation.">Master Stylist Haircut & Consultation</a>
+            <a href="#" class="service-link" data-tooltip="Precision custom cut, beard shaping, and styling consultation.">Master Stylist Haircut & Consultation</a>
           </div>
-          <div class="price">$150</div>
+          <div class="price">$150+</div>
         </div>
       </div>
 
